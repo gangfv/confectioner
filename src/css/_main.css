@@ -1,0 +1,156 @@
+.info-cake {
+    height: calc(100vh - 90px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-cake::after {
+    position: absolute;
+    content: "";
+    height: 450px;
+    background: url("../img/smoke_1920px.png") no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: inline-block;
+    bottom: -50px;
+    z-index: 1;
+}
+
+.info-cake .raspberry--one img {
+    position: absolute;
+    width: 205px;
+    left: -60px;
+    top: 200px;
+    height: 205px;
+    transform: rotate(3.18deg);
+}
+
+.info-cake .raspberry--two img {
+    position: absolute;
+    right: 30px;
+    top: 120px;
+    width: 130px;
+    height: 130px;
+    transform: matrix(-0.97, 0.24, 0.24, 0.97, 0, 0);
+}
+
+.info-cake .raspberry--three img {
+    position: absolute;
+    right: 100px;
+    bottom: 30px;
+    width: 220px;
+    height: 205px;
+    transform: matrix(-0.98, -0.21, -0.21, 0.98, 0, 0);
+    z-index: 2;
+}
+
+.info-cake .leaf--one img {
+    position: absolute;
+    left: -150px;
+    bottom: -30px;
+    width: 410px;
+    height: 315px;
+}
+
+.cake {
+    width: 50%;
+    position: relative;
+}
+
+.cake img {
+    position: absolute;
+    top: -380px;
+    right: 0;
+    width: 1200px;
+}
+
+.info-site {
+    display: flex;
+    width: 600px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.info-site h1 {
+    font-size: 52px;
+    margin-bottom: 35px;
+    font-weight: bold;
+}
+
+.info-site p {
+    font-size: 20px;
+    margin-bottom: 45px;
+}
+
+.btn-info-site {
+    max-width: 300px;
+    width: 100%;
+    height: 90px;
+    padding: 10px 25px 10px 25px;
+    font-size: 20px;
+}
+
+.info-category {
+    height: 2200px;
+    background: var(--white);
+}
+
+.info-category h1 {
+    padding: 100px 0;
+    text-align: center;
+    font-size: 48px;
+    position: relative;
+    z-index: 3;
+}
+
+.card {
+    flex: 0 1 calc(100% / 3 * 2);
+    background: #FDFDFD;
+    max-width: 340px;
+    height: 580px;
+    border-radius: 25px;
+    margin: 25px;
+}
+
+.card img {
+    max-width: 415px;
+    width: 100%;
+    height: 225px;
+    border-radius: 25px 25px 0 0;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.card-body .title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card-body .info {
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.card-body .price {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.btn-card {
+    max-width: 250px;
+    height: 65px;
+    padding: 0 50px;
+    font-size: 22px;
+}
+
+.category-f {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
