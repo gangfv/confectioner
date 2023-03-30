@@ -4,6 +4,7 @@
     --red: #ff345f;
     --active-red: #ef2f58;
     --white: #F7F7F7;
+    --card: #FDFDFD;
 }
 
 body {
@@ -34,6 +35,25 @@ p {
     width: 100%;
     margin: 0 auto;
 }
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 1000px;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        max-width: 450px;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        max-width: 300px;
+    }
+}
+
 ._container-card {
     max-width: 1400px;
 }
