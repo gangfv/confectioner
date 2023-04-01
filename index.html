@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="src/css/_.css">
     <link rel="stylesheet" href="src/css/_header.css">
     <link rel="stylesheet" href="src/css/_main.css">
+    <link rel="stylesheet" href="src/css/slider.css">
     <title>Кондитер</title>
 </head>
 <body>
@@ -179,18 +180,55 @@
     </section>
     <section class="review">
         <h1>Почитайте отзывы наших клиентов</h1>
-        <div class="container review-card">
-            <div class="review-info">
-                <h3>Его восторг не передать словами!</h3>
-                <p>фыврофывлрфыолвр фыролвлфоывролф фыртовлрфывол фыжволщлфды ыфв фывьолд фывоьтлдфыв ьлфыдв фыофлд
-                    фывфывфывфывфыв фывывф фыв ывфыв фывфывфы вфывыфвфыв фывфыв фыв фывфывфывфывффывфыв
-                </p>
+        <div class="container slider">
+            <div class="slider-line">
+                <div class="review-card">
+                    <div class="review-info">
+                        <h3>Его восторг не передать словами!</h3>
+                        <p>фыврофывлрфыолвр фыролвлфоывролф фыртовлрфывол фыжволщлфды ыфв фывьолд фывоьтлдфыв ьлфыдв
+                            фыофлд
+                            фывфывфывфывфыв фывывф фыв ывфыв фывфывфы вфывыфвфыв фывфыв фыв фывфывфывфывффывфыв
+                        </p>
+                    </div>
+                    <div class="review-user">
+                        <img src="src/img/temp_user.jpg" alt="Татьяна Филатова">
+                        <div class="user">Татьяна Филатова</div>
+                        <div class="user-city">Ростов-на-Дону</div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-info">
+                        <h3>Его восторг не передать словами!</h3>
+                        <p>фыврофывлрфыолвр фыролвлфоывролф фыртовлрфывол фыжволщлфды ыфв фывьолд фывоьтлдфыв ьлфыдв
+                            фыофлд
+                            фывфывфывфывфыв фывывф фыв ывфыв фывфывфы вфывыфвфыв фывфыв фыв фывфывфывфывффывфыв
+                        </p>
+                    </div>
+                    <div class="review-user">
+                        <img src="src/img/temp_user.jpg" alt="Татьяна Филатова">
+                        <div class="user">Татьяна Филатова</div>
+                        <div class="user-city">Ростов-на-Дону</div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-info">
+                        <h3>Его восторг не передать словами!</h3>
+                        <p>фыврофывлрфыолвр фыролвлфоывролф фыртовлрфывол фыжволщлфды ыфв фывьолд фывоьтлдфыв ьлфыдв
+                            фыофлд
+                            фывфывфывфывфыв фывывф фыв ывфыв фывфывфы вфывыфвфыв фывфыв фыв фывфывфывфывффывфыв
+                        </p>
+                    </div>
+                    <div class="review-user">
+                        <img src="src/img/temp_user.jpg" alt="Татьяна Филатова">
+                        <div class="user">Татьяна Филатова</div>
+                        <div class="user-city">Ростов-на-Дону</div>
+                    </div>
+                </div>
             </div>
-            <div class="review-user">
-                <img src="src/img/temp_user.jpg" alt="Татьяна Филатова">
-                <div class="user">Татьяна Филатова</div>
-                <div class="user-city">Ростов-на-Дону</div>
-            </div>
+        </div>
+        <div class="btns">
+            <div id="prev" class="btn"><img src="src/img/arrow.svg" alt=""></div>
+            <div id="next" class="btn"><img src="src/img/arrow.svg" alt=""></div>
         </div>
         <div class="raspberry--one">
             <img src="src/img/raspberry.png" alt="Малина">
@@ -199,7 +237,7 @@
     <section class="product">
         <h1>Просмотрите примеры выполненных работ</h1>
         <p>Фото проектов из нашего Instagram</p>
-        <div class="category-f product-list">
+        <div class="product-list scroll-list">
             <img src="src/img/temp_list_cake.jpg" alt="Торт">
             <img src="src/img/temp_list_cake.jpg" alt="Торт">
             <img src="src/img/temp_list_cake.jpg" alt="Торт">
@@ -236,5 +274,7 @@
     <p>Служба поддержки</p>
     <p>Политика конфиденциальности</p>
 </footer>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script src="src/js/slider.js"></script>
 </body>
 </html>

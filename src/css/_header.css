@@ -47,9 +47,18 @@ header {
     font-size: 14px;
 }
 
-@media (max-width: 700px) {
+.scroll-list {
+    overflow: auto;
+    height: 1900px;
+}
+
+@media (max-width: 800px) {
     .catalog nav a {
         font-size: 14px;
+    }
+
+    .scroll-list {
+        height: 500px;
     }
 
     .number {
@@ -71,7 +80,7 @@ header {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .catalog nav a {
         font-size: 12px;
     }
@@ -99,7 +108,7 @@ header {
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
     header {
         flex-direction: column;
         padding: 5px;
