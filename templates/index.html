@@ -1,0 +1,151 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/_.css' %}">
+    <link rel="stylesheet" href="{% static 'css/_header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/_main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slider.css' %}">
+    <title>Кондитер</title>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <img src="{% static 'img/logo.svg' %}" alt="Лого">
+    </div>
+    <div class="catalog">
+        <nav>
+            <a href="#conditer">Каталог</a>
+        </nav>
+        <nav>
+            <a href="#reviews">Отзывы</a>
+        </nav>
+        <nav>
+            <a href="#contact">Контакты</a>
+        </nav>
+    </div>
+    <div class="number-info">
+        <div class="number-logo">
+            <img src="{% static 'img/info-nubmer.svg' %}" alt="Номер телефона">
+        </div>
+        <div class="number-f">
+            <p class="number">+7 999 456 12 12</p>
+            <p class="number-label">Ежедневно с 10:00 до 20:00</p>
+        </div>
+    </div>
+</header>
+<main>
+    <section class="info-cake">
+        <div class="container info-site">
+            <h1>Шоколадная радость для всех домашних!</h1>
+            <p>Мы не используем дополнительные консерванты,
+                какие-либо добавки или пальмовое масло и прочее.
+                Гарантируем качество и отличный вкус! </p>
+            <a type="button" href="#conditer" class="btn btn-info-site">Перейти в каталог</a>
+        </div>
+        <div class="cake">
+            <img src="{% static 'img/cake.png' %}" alt="Торт">
+        </div>
+        <div class="raspberry--one">
+            <img src="{% static 'img/raspberry.png' %}" alt="Малина">
+        </div>
+        <div class="raspberry--two">
+            <img src="{% static 'img/raspberry.png' %}" alt="Малина">
+        </div>
+        <div class="raspberry--three">
+            <img src="{% static 'img/raspberry.png' %}" alt="Малина">
+        </div>
+        <div class="leaf--one">
+            <img src="{% static 'img/leaf.png' %}" alt="Лист">
+        </div>
+    </section>
+    <section id="conditer" class="info-category">
+        <h1>Для любых событий и дорогих людей</h1>
+        <div class="container _container-card scroll">
+            <div class="category-f">
+                {% for card in Cards %}
+                <div class="card">
+                    <img src="{{card.img.url}}" alt="Шоколадный торт">
+                    <div class="card-body">
+                        <h3 class="title">{{card.name}}</h3>
+                        <p class="info">{{card.descriptions}}</p>
+                        <p class="price">{{card.price}} руб.</p>
+                        <button class="btn btn-card">Подробнее</button>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+    </section>
+    <section id="reviews" class="review">
+        <h1>Почитайте отзывы наших клиентов</h1>
+        <div class="container slider">
+            <div class="slider-line">
+                {% for review in Reviews %}
+                <div class="review-card">
+                    <div class="review-info">
+                        <h3>{{review.title}}</h3>
+                        <p>{{review.descriptions}}</p>
+                    </div>
+                    <div class="review-user">
+                        <img src="{{review.img.url}}" alt="Татьяна Филатова">
+                        <div class="user">{{review.name}}</div>
+                        <div class="user-city">{{review.city}}</div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="btns">
+            <div id="prev" class="btn"><img src="{% static 'img/arrow.svg' %}" alt=""></div>
+            <div id="next" class="btn"><img src="{% static 'img/arrow.svg' %}" alt=""></div>
+        </div>
+        <div class="raspberry--one">
+            <img src="{% static 'img/raspberry.png' %}" alt="Малина">
+        </div>
+    </section>
+    <section class="product">
+        <h1>Просмотрите примеры выполненных работ</h1>
+        <p>Фото проектов из нашего Instagram</p>
+        <div class="product-list scroll-list">
+            {% for work in Works %}
+            <img src="{{work.img.url}}" alt="Торт">
+            {% endfor %}
+        </div>
+    </section>
+    <section id="contact" class="feedback">
+        <div class="container feedback-form">
+            <h1>Чтобы сделать заказ, укажите ваш телефон</h1>
+            <p>Мы перезвоним в течение 15 минут, чтобы уточнить ваши пожелания</p>
+            <form id="form" class="feedback-input">
+                <input type="text" name="number" placeholder="Номер телефона">
+                <button type="submit" class="btn btn-feedback">Сделать заказ</button>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" required>
+                        Нажимая на кнопку, вы соглашаетесь с условием обработки персональных данных
+                    </label>
+                </div>
+            </form>
+        </div>
+        <div class="raspberry--one">
+            <img src="{% static 'img/raspberry.png' %}" alt="Малина">
+        </div>
+    </section>
+</main>
+<footer class="container">
+    <p>Согласие на обработку данных</p>
+    <p>Служба поддержки</p>
+    <p>Политика конфиденциальности</p>
+</footer>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+<script src="{% static 'js/slider.js' %}"></script>
+<script src="{% static 'js/feedback.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+version: "3"
+services:
+  nginx:
+    build: ./nginx
+    container_name: nginx_temp
+    links:
+      - web
+    depends_on:
+      - web
+    volumes:
+      - static_volume:/app/staticfiles
+      - media_volume:/app/media
+    ports:
+      - "80:80"
+      - "443:443"
+  #  postgresql:
+  #    image: postgres:12.0
+  #    container_name: postgresql
+  #    environment:
+  #      - POSTGRES_USER=postgres
+  #      - POSTGRES_PASSWORD=postgres
+  #      - POSTGRES_DB=postgres
+  #    ports:
+  #      - "5432:5432"
+  web:
+    container_name: web_temp
+    build: .
+    command: >
+      sh -c "python manage.py collectstatic --noinput &&
+            gunicorn settings.wsgi:application --bind 0.0.0.0:8077 --log-level debug --workers=2 --worker-class=gevent --worker-connections=100"
+    ports:
+      - "8077:8077"
+    volumes:
+      - static_volume:/app/staticfiles
+      - media_volume:/app/media
+volumes:
+  media_volume:
+  static_volume:
